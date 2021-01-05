@@ -20,6 +20,14 @@ public class ArrayList {
         size++;
         return true;
     }
-
-
+    public String toString(){
+        String str = "[";
+        for(int i = 0; i < size; i++){
+            str += elementData[i];
+            if(i < size - 1){
+                str += ", ";
+            }
+        }
+        return str + "]";
+    }
 }
