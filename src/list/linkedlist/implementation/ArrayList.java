@@ -1,4 +1,6 @@
 package list.linkedlist.implementation;
 
-public class LinkedList {
+public class ArrayList {
+    private int size = 0;
+    private Object[] elementData = new Object[100];
 }
