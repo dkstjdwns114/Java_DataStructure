@@ -70,13 +70,14 @@ public class ArrayList {
         public boolean hasNext(){
             return nextIndex < size();
         }
+        public boolean hasPrevious(){
+            return nextIndex > 0;
+        }
         public Object next(){
-//            Object returnData = elementData[nextIndex];
-//            nextIndex++;
-//            return returnData;
-
             return elementData[nextIndex++];
         }
-
+        public Object previous(){
+            return elementData[--nextIndex];
+        }
     }
 }
