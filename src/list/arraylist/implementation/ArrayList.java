@@ -1,4 +1,4 @@
-package list.linkedlist.implementation;
+package list.arraylist.implementation;
 
 public class ArrayList {
     private int size = 0;
