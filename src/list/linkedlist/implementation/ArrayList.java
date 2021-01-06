@@ -79,5 +79,12 @@ public class ArrayList {
         public Object previous(){
             return elementData[--nextIndex];
         }
+        public void add(Object element){
+           ArrayList.this.add(nextIndex++, element);
+        }
+        public void remove(){
+            ArrayList.this.remove(nextIndex - 1);
+            nextIndex--;
+        }
     }
 }
