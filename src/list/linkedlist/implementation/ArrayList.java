@@ -60,4 +60,23 @@ public class ArrayList {
         }
         return -1;
     }
+    public ListIterator listIterator(){
+        return new ListIterator();
+    }
+
+    class ListIterator {
+        private int nextIndex = 0;
+
+        public boolean hasNext(){
+            return nextIndex < size();
+        }
+        public Object next(){
+//            Object returnData = elementData[nextIndex];
+//            nextIndex++;
+//            return returnData;
+
+            return elementData[nextIndex++];
+        }
+
+    }
 }

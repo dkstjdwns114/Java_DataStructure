@@ -7,7 +7,14 @@ public class Main {
         numbers.addLast(20);
         numbers.addLast(30);
         numbers.addLast(40);
-        System.out.println(numbers.size());
-        System.out.println(numbers.indexOf(70));
+
+//        for(int i = 0; i < numbers.size(); i++){
+//            System.out.println(numbers.get(i));
+//        }
+
+        ArrayList.ListIterator li = numbers.listIterator();
+        while(li.hasNext()){
+            System.out.println(li.next());
+        }
     }
 }
