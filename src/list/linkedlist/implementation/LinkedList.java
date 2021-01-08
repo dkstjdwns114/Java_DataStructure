@@ -102,4 +102,11 @@ public class LinkedList {
     public Object removeLast(){
         return remove(size - 1);
     }
+    public int size(){
+        return size;
+    }
+    public Object get(int k){
+        Node temp = node(k);
+        return temp.data;
+    }
 }
