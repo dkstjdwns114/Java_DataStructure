@@ -7,6 +7,6 @@ public class Main {
         numbers.addLast(20);
         numbers.addLast(30);
 
-        System.out.println(numbers.get(0));
+        System.out.println(numbers.indexOf(20));
     }
 }
