@@ -22,6 +22,11 @@ public class DoublyLinkedList {
     public void addFirst(Object input){
         Node newNode = new Node(input);
         newNode.next = head;
+
+        if(head != null){
+            head.prev = newNode;
+        }
+
         head = newNode;
         size++;
         if(head.next == null){
@@ -34,6 +39,7 @@ public class DoublyLinkedList {
             addFirst(input);
         } else {
             tail.next = newNode;
+            newNode.prev = tail;
             tail = newNode;
             size++;
         }
