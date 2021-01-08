@@ -73,4 +73,13 @@ public class LinkedList {
 
         return str + "]";
     }
+    public Object removeFirst(){
+        Node temp = head;
+        head = head.next;
+        Object returnData = temp.data;
+        temp = null;
+        size--;
+
+        return returnData;
+    }
 }
