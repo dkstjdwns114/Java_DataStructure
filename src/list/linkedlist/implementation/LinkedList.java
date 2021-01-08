@@ -121,4 +121,24 @@ public class LinkedList {
         }
         return index;
     }
+    public ListIterator listIterator(){
+        return new ListIterator();
+    }
+
+    class ListIterator {
+        private Node next;
+        private Node lastReturned;
+        private int nextIndex;
+
+        ListIterator(){
+            next = head;
+        }
+
+        public Object next(){
+            lastReturned = next;
+            next = next.next;
+            nextIndex++;
+            return lastReturned.data;
+        }
+    }
 }
