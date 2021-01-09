@@ -189,11 +189,17 @@ public class DoublyLinkedList {
 
             if(lastReturned == null){
                 head = newNode;
+                newNode.next = next;
             }else{
                 lastReturned.next = newNode;
+                newNode.prev = lastReturned;
+                if(next != null){
+                    newNode.next = next;
+                    next.prev = newNode;
+                }else {
+                    tail = newNode;
+                }
             }
-
-            newNode.next = next;
 
             lastReturned = newNode;
             nextIndex++;
